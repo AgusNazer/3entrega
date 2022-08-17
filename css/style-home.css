@@ -79,22 +79,12 @@ body {
 
 /* SCSS */
 /* variable $fuentes-negras */
-.h1-main a {
-  grid-area: h1-main;
-  transition: all 2s;
-  color: black; }
-
-.h1-Gallery a {
-  transition: all 2s;
-  /* background: linear-gradient(to top,#29231f,#e2df70 ); */
-  font-size: 24px;
-  color: black; }
-
 h2 {
   grid-area: h2;
   margin: 0 0 0 1px; }
 
-.h2-main {
+.h1-main {
+  font-size: 40px;
   animation-duration: 2s;
   animation-name: aparecer;
   animation-iteration-count: infinite; }
@@ -145,6 +135,18 @@ img {
 .p-index {
   font-weight: 600; }
 
+.iframe-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 15px; }
+
+.iframe-video {
+  width: 60%;
+  height: 20rem;
+  justify-content: center; }
+
 /*SECCION ABOUT*/
 .fondo-about {
   background-image: url(../imagenes/about/background.jpg);
@@ -178,7 +180,7 @@ p {
 .grilla-about {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "header header header" "h1-main h1-main h1-main" "h2-history h2-history h2-history" "p-history p-history p-history" "imagen1 imagen2 imagen3" "p-history2 p-history2 p-history2" "footer footer footer";
+  grid-template-areas: "header header header" "h1-main h1-main h1-main" "h1-history h1-history h1-history" "p-history p-history p-history" "imagen1 imagen2 imagen3" "p-history2 p-history2 p-history2" "footer footer footer";
   row-gap: 5px;
   column-gap: 5px; }
 
@@ -188,8 +190,8 @@ header {
 .h1-main {
   grid-area: h1-main; }
 
-.h2-history {
-  grid-area: h2-history; }
+.h1-history {
+  grid-area: h1-history; }
 
 .p-history {
   grid-area: p-history;
@@ -227,7 +229,7 @@ main {
   margin-bottom: 1em; }
 
 /* variable color */
-.h2-history {
+.h1-history {
   padding: 0 0 10px 0;
   margin: 2px;
   text-align: center !important;
@@ -243,7 +245,7 @@ main {
   display: flex;
   justify-content: center; }
 
-.h2-center {
+.h1-center {
   animation-duration: 1.5s;
   animation-name: aparecer;
   animation-iteration-count: infinite; }
@@ -255,7 +257,7 @@ main {
     opacity: 1; } }
 
 /* variable color */
-.h2-center {
+.h1-center {
   padding: 0 0 10px 0;
   margin: 2px;
   text-align: center !important;
@@ -274,7 +276,7 @@ main {
 .grilla-menu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "header header header" "h1-main h1-main h1-main" "h2-center h2-center h2-center" "p-textCenter p-textCenter p-textCenter" "titulo1 titulo2 titulo3" "card1 card2 card3" "imagen1-menu imagen2-menu imagen3-menu" "footer footer footer";
+  grid-template-areas: "header header header" "h1-main h1-main h1-main" "h1-center h1-center h1-center" "p-textCenter p-textCenter p-textCenter" "titulo1 titulo2 titulo3" "card1 card2 card3" "imagen1-menu imagen2-menu imagen3-menu" "footer footer footer";
   margin: 4px;
   column-gap: 4px; }
 
@@ -284,8 +286,8 @@ main {
 .h1-main {
   grid-area: h1-main; }
 
-.h2-center {
-  grid-area: h2-center; }
+.h1-center {
+  grid-area: h1-center; }
 
 .p-textCenter {
   grid-area: p-textCenter; }
@@ -366,28 +368,12 @@ main {
   height: 100%;
   font-family: 'Playfair Display', serif; }
 
-.grilla-shop {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "header header header header" "h1 h1 h1 h1" "h3 h3 h3 h3" "card-a card-b card-c card-d" "card-e card-f card-g card-h" "card-i card-j card-k card-l" "footer footer footer footer";
-  column-gap: 2px;
-  row-gap: 2px; }
-
-.header {
-  grid-area: header; }
-
-h1 {
-  grid-area: h1; }
-
-h3 {
-  grid-area: h3; }
+.h1-shop {
+  font-size: 25px;
+  text-align: center; }
 
 .card {
-  width: 18rem;
-  margin-right: 2px; }
-
-footer {
-  grid-area: footer; }
+  height: 40rem; }
 
 /* SECCION CONTACT */
 .fondo-contact {
@@ -397,6 +383,11 @@ footer {
   background-attachment: fixed;
   height: 100%;
   font-family: 'Playfair Display', serif; }
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 /*  variable $fuentes-negras */
 .form {
@@ -461,7 +452,8 @@ button {
   width: 21.25rem;
   height: 28.125rem;
   margin: 10px;
-  padding: 10px; }
+  padding: 10px;
+  border-radius: 8px; }
 
 /* RESPONSIVE */
 /*  MOBILE */
@@ -479,10 +471,6 @@ button {
   .grilla-about, .grilla-menu {
     display: flex;
     flex-direction: column; }
-  .grilla-shop {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
   h1, h3 {
     text-align: center; }
   .form-container {
