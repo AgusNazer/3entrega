@@ -389,7 +389,7 @@
   }
   
   /* SECCION SHOP CARDS */
-  
+  /* Variable $fuentes-negras */
   .fondo-shop {
     background-image: url(../imagenes/shop/fondo.jpg);
     background-repeat: no-repeat;
@@ -400,6 +400,7 @@
   }
   
   .h1-shop{
+   color:$fuentes-negras;
   font-size: 25px;
   text-align: center;
 
